@@ -39,7 +39,12 @@ func ResolvePath(p string, vfs string) (any, error) {
 			}
 
 			result = cmdResult
-			vfsPath = "/" + result.(string)
+
+			if typeofObject(result) == "string" {
+				vfsPath = "/" + result.(string)
+			} else {
+				vfsPath = "/"
+			}
 
 			i += subcommands
 
@@ -63,4 +68,13 @@ func ResolvePath(p string, vfs string) (any, error) {
 	}
 
 	return result, nil
+}
+
+func typeofObject(variable any) string {
+	switch variable.(type) {
+	case string:
+		return "string"
+	default:
+		return "unknown"
+	}
 }

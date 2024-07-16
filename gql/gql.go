@@ -13,3 +13,5 @@ const VFS_RESOLVE_PATH_QUERY = `{\"resolve_path\":{\"path\":\"%s\"}}`
 const ADO_TYPE_QUERY = `{\"type\":{}}`
 
 const PRIMITIVE_KEY_QUERY = `{\"get_value\":{\"key\":\"%s\"}}`
+
+const CW721_TOKEN_QUERY = `{\"nft_info\":{\"token_id\":\"%s\"}}`

@@ -19,6 +19,11 @@ func PrimtiveCommand(contract string, command []string) (any, error) {
 		if stringValue != nil {
 			return stringValue.(string), nil
 		}
+
+		addrValue := value.(map[string]any)["addr"]
+		if addrValue != nil {
+			return addrValue.(string), nil
+		}
 		return value, nil
 	}
 	return nil, errors.New("Not Implemented")

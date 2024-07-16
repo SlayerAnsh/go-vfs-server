@@ -14,5 +14,8 @@ func ApplyCommand(contract string, command []string) (any, error) {
 	if adoType == "primitive" {
 		return PrimtiveCommand(contract, command)
 	}
+	if adoType == "cw721" {
+		return Cw721Command(contract, command)
+	}
 	return nil, errors.New("Not Implemented")
 }
