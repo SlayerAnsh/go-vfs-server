@@ -14,11 +14,11 @@ var App *gin.Engine
 
 func init() {
 	App = gin.Default()
-	App.GET("/favicon.ico", func(c *gin.Context) {
+	App.GET("/api/favicon.ico", func(c *gin.Context) {
 		c.String(http.StatusOK, "OK")
 		return
 	})
-	App.GET("/protocol/*uri", func(c *gin.Context) {
+	App.GET("/api/protocol/*uri", func(c *gin.Context) {
 
 		host := c.Request.Host
 		chainId := strings.Split(strings.Split(host, ":")[0], ".")[0]
