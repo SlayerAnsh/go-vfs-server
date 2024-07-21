@@ -1,58 +1,131 @@
-title: "[ADO Proposal] "
-labels: ["ado","proposal"]
+title: "[ADO Proposal]: "
+labels: ["ado", "proposal"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        This is text that will show up in the template!
-  - type: textarea
-    id: improvements
-    attributes:
-      label: Top 3 improvements
-      description: "What are the top 3 improvements we could make to this project?"
-      value: |
-        1.
-        2.
-        3.
-        ...
-      render: bash
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: |
-        ## Markdown header
-        And some more markdown
   - type: input
-    id: has-id
+    id: ado-name
     attributes:
-      label: Suggestions
-      description: A description about suggestions to help you
+      label: Name of the ADO?
+      description: Name
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: "What is the goal of this ADO and how does it function?"
     validations:
       required: true
+
   - type: dropdown
-    id: download
+    id: interoperability
     attributes:
-      label: Which area of this project could be most improved?
+      label: Does it need to work with another ADO or is it standalone?
       options:
-        - Documentation
-        - Pull request review time
-        - Bug fix time
-        - Release cadence
+        - Standalone
+        - Interact with other ADO
+        - Mostly standalone but can interact with other ADOs
     validations:
       required: true
-  - type: checkboxes
+
+  - type: textarea
+    id: interaction-discussion
     attributes:
-      label: Check that box!
+      label: Where do you think this ADO fit in ecosystem?
+      description: "Tell us more about this ADO interaction with other ADO"
+    validations:
+      required: true
+
+  - type: textarea
+    id: modules
+    attributes:
+      label: Modules added in ADO?
+      description: "Does it implement any modules? Please provide description for any modules that this ADO will implement"
+
+  - type: dropdown
+    id: builder
+    attributes:
+      label: Whom would you like to develop this ADO?
       options:
-        - label: This one!
-          required: true
-        - label: I won't stop you if you check this one, too
+        - You
+        - Andromeda Team
+        - External Developer from Community
+    validations:
+      required: true
+
+  - type: textarea
+    id: builder-description
+    attributes:
+      label: Do you want to add note for developer of this ADO?
+      description: "Add your note here"
+
+  - type: textarea
+    id: credits
+    attributes:
+      label: Credits/Associations
+      description: "Is this ADO based upon a previous project or ADO or in partnership with any other groups or developers? If so, please list here and provide a link if possible."
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources
+      description: "Can you provide any docs/articles/research that explains the main idea of the ADO and how/why it is used?"
+
   - type: markdown
     attributes:
       value: |
-        ### The thrilling conclusion
-        _to our template_
+        ## ADO Flow Breakdown
+        Please list and provide descriptions of each step in the ADO flow sequence (show us how to work with the ADO and associated workflow, visuals are great here)
+
+  - type: textarea
+    id: instantiate
+    attributes:
+      label: Instantiate Message
+      description: "Details about contract instantiation message"
+      value: |
+        ### Instantiation
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: execute
+    attributes:
+      label: Execute Messages
+      description: "Details about contract execute messages"
+      value: |
+        ### Execute Messages
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: query
+    attributes:
+      label: Query Messages
+      description: "Details about contract query messages"
+      value: |
+        ### Query Messages
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: receive
+    attributes:
+      label: Receive Messages
+      description: "Details about receive messages, if any"
+      value: |
+        ### CW20 Receive Messages
+        Details about cw20 receive messages
+
+        ### CW721 Receive Messages
+        Details about cw721 receive messages
+
+        ### Other Receive Messages
+        Details about any other receive messages
+
+    validations:
+      required: true
+
   - type: checkboxes
     attributes:
       label: Code of Conduct
