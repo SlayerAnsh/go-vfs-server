@@ -81,7 +81,7 @@ body:
       label: Instantiate Message
       description: "Details about contract instantiation message"
       value: |
-        ### Instantiation
+        ## Instantiation
 
     validations:
       required: true
@@ -92,7 +92,7 @@ body:
       label: Execute Messages
       description: "Details about contract execute messages"
       value: |
-        ### Execute Messages
+        ## Execute Messages
 
     validations:
       required: true
@@ -103,7 +103,7 @@ body:
       label: Query Messages
       description: "Details about contract query messages"
       value: |
-        ### Query Messages
+        ## Query Messages
 
     validations:
       required: true
@@ -114,13 +114,13 @@ body:
       label: Receive Messages
       description: "Details about receive messages, if any"
       value: |
-        ### CW20 Receive Messages
+        ## CW20 Receive Messages
         Details about cw20 receive messages
 
-        ### CW721 Receive Messages
+        ## CW721 Receive Messages
         Details about cw721 receive messages
 
-        ### Other Receive Messages
+        ## Other Receive Messages
         Details about any other receive messages
 
   - type: textarea
@@ -141,7 +141,7 @@ body:
       label: Code Snippets
       description: "Snippets can help developers understand what you are trying to propose. Its highly recommended that you add snippets"
       value: |
-        ### InstantiateMsg
+        ## InstantiateMsg
         ```rust
         ```json
         {
