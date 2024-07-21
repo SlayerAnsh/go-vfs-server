@@ -81,7 +81,17 @@ body:
       label: Instantiate Message
       description: "Details about contract instantiation message"
       value: |
-        ## Instantiation
+        # Instantiation
+        Instantiation Details
+
+        ### Snippet
+        ```ts
+        {
+          "owner":"andr1...",
+          "kernel_address":"andr1...",
+          "other_keys":"..."
+        }
+        ```
 
     validations:
       required: true
@@ -92,7 +102,31 @@ body:
       label: Execute Messages
       description: "Details about contract execute messages"
       value: |
-        ## Execute Messages
+        # Execute Messages
+
+        ## Execute Message - 1
+        Details about Execute Message
+
+        ### Snippet
+        ```ts
+        {
+          "owner":"andr1...",
+          "kernel_address":"andr1...",
+          "other_keys":"..."
+        }
+        ```
+
+        ## Execute Message - 2
+        Details about Execute Message
+
+        ### Snippet
+        ```ts
+        {
+          "owner":"andr1...",
+          "kernel_address":"andr1...",
+          "other_keys":"..."
+        }
+        ```
 
     validations:
       required: true
@@ -103,7 +137,31 @@ body:
       label: Query Messages
       description: "Details about contract query messages"
       value: |
-        ## Query Messages
+        # Query Messages
+
+        ## Query Message - 1
+        Details about Query Message
+
+        ### Snippet
+        ```ts
+        {
+          "owner":"andr1...",
+          "kernel_address":"andr1...",
+          "other_keys":"..."
+        }
+        ```
+
+        ## Query Message - 2
+        Details about Query Message
+
+        ### Snippet
+        ```ts
+        {
+          "owner":"andr1...",
+          "kernel_address":"andr1...",
+          "other_keys":"..."
+        }
+        ```
 
     validations:
       required: true
@@ -136,13 +194,12 @@ body:
       description: "Ex. Will this ADO need to work with anything off chain, a different app, etc?"
 
   - type: textarea
-    id: snippets
+    id: additional-snippets
     attributes:
-      label: Code Snippets
+      label: Additional Code Snippets
       description: "Snippets can help developers understand what you are trying to propose. Its highly recommended that you add snippets"
       value: |
-        ## InstantiateMsg
-        ```rust
+        # Additional Snippets
         ```json
         {
           "owner":"andr1...",
