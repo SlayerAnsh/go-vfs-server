@@ -54,7 +54,7 @@ body:
         ### The thrilling conclusion
         _to our template_
   - type: checkboxes
-  attributes:
+    attributes:
     label: Code of Conduct
     description: The Code of Conduct helps create a safe space for everyone. We require
       that everyone agrees to it.
