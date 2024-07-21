@@ -123,8 +123,32 @@ body:
         ### Other Receive Messages
         Details about any other receive messages
 
-    validations:
-      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Considerations/Concerns
+      description: "What factors should be considered to mitigate risk of misuse, abuse, or other unintended scenarios, if any?"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Any Dependencies or Third Party Integrations?
+      description: "Ex. Will this ADO need to work with anything off chain, a different app, etc?"
+
+  - type: textarea
+    id: snippets
+    attributes:
+      label: Code Snippets
+      description: "Snippets can help developers understand what you are trying to propose. Its highly recommended that you add snippets"
+      value: |
+        ### InstantiateMsg
+        ```rust
+        ```json
+        {
+          "owner":"andr1...",
+          "kernel_address":"andr1...",
+          "other_keys":"..."
+        }
 
   - type: checkboxes
     attributes:
